@@ -1,9 +1,9 @@
 .layout-card{
-  max-width:220px;
+  max-width:330px;
   max-height:370px;
   box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
   padding:10px;
-  margin:15px;
+  margin:10px;
 }
 
 .layout-card img{

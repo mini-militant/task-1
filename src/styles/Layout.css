@@ -1,0 +1,24 @@
+.layout-card{
+  max-width:220px;
+  max-height:370px;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  padding:10px;
+  margin:15px;
+}
+
+.layout-card img{
+  width:100%;
+  height:180px;
+}
+
+.layout-headline{
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.layout-authorName{
+  font-size: 14px;
+  font-style: italic;
+  font-weight: 400;
+  color:gray;
+}

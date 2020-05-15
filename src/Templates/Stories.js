@@ -5,13 +5,12 @@ import './Stories.css'
 
 function Stories(){
   const [data, setData] = useState([]);
-  const [ count, setCount ] = useState(0)
 
   useEffect(()=>{
     fetch('https://thequint-malibu-beta.quintype.io/api/v1/stories')
     .then(res=>res.json())
     .then(res=>setData(res.stories))
-  },[count])
+  },[])
 
   return (
     <div className="stories-container">

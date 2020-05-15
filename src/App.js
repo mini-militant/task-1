@@ -1,7 +1,7 @@
 import React from 'react';
 import logo from './logo.svg';
 
-import Stories from './Components/Stories'
+import Stories from './Templates/Stories'
 
 function App() {
   return (

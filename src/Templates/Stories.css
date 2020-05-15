@@ -1,8 +1,22 @@
 .stories-container{
-  display:flex;
-  flex-direction: row;
-  justify-content:space-around;
-  align-items:center;
-  flex-wrap: wrap;
-  padding: 80px;
+  display:grid;
+  grid-template-columns: auto auto auto auto;
+}
+
+@media only screen and (max-width: 1000px) {
+  .stories-container{
+    grid-template-columns: auto auto auto;
+  }
+}
+
+@media only screen and (max-width: 720px) {
+  .stories-container{
+    grid-template-columns: auto auto;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .stories-container{
+    grid-template-columns: auto;
+  }
 }

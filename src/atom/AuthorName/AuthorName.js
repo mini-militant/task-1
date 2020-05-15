@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import './AuthorName.css'
 export default function AuthorName(props) {
   return (

@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import './Headline.css'
 
 export default function Headline(props) {

@@ -1,7 +1,6 @@
 import React,{ useState , useEffect} from 'react'
 import Layout from '../molecule/Layout'
 import './Stories.css'
-import axios from 'axios'
 
 
 function Stories(){
@@ -14,16 +13,21 @@ function Stories(){
     .then(res=>setData(res.stories))
   },[count])
 
-  console.log(data);
   return (
-    <div>
+    <div className="stories-container">
       {
-        data.map(item=>
-          <Layout
-          imgKey={item["hero-image-s3-key"]}
-          headline={item.headline}
-          authorName={item["author-name"]}
-          />
+        data.map(item=>{
+          return(
+            <div key={item.id}>
+            <Layout
+            imgKey={item["hero-image-s3-key"]}
+            headline={item.headline}
+            authorName={item["author-name"]}
+            />
+            </div>
+          )
+        }
+
         )
       }
     </div>

@@ -5,10 +5,8 @@ import Headline from '../atom/Headline/Headline'
 import AuthorName from '../atom/AuthorName/AuthorName'
 
 export default function Layout(props){
-  console.log('props layout',props);
     return(
       <div>
-
         <div className="layout-card">
           <Image imgKey={props.imgKey}/>
           <Headline headline={props.headline}/>

@@ -5,9 +5,12 @@ import './slugContainer.css'
 export default function SlugComponent(props){
 
   const[slugData,setSlugData] = useState([])
-  useEffect(async () => {
-    const result = await axios(props.url);
-    setSlugData(result.data.items);
+  useEffect(() => {
+    async function fetchData(){
+      const result = await axios(props.url);
+      setSlugData(result.data.items);
+    }
+    fetchData();
   },[])
 
   return(

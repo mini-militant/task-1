@@ -1,4 +1,4 @@
-export const Url = [
+const Url = [
 "https://thequint-malibu-beta.quintype.io/api/v1/collections/home",
 "https://thequint-malibu-beta.quintype.io/api/v1/collections/top-story-home",
 "https://thequint-malibu-beta.quintype.io/api/v1/collections/videos-home",
@@ -21,3 +21,5 @@ export const Url = [
 "https://thequint-malibu-beta.quintype.io/api/v1/collections/gender",
 "https://thequint-malibu-beta.quintype.io/api/v1/collections/news",
 ]
+
+export default Url;

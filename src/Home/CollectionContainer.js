@@ -1,9 +1,9 @@
 import React,{useState,useEffect} from 'react';
-import Api from '../API/Api'
 import axios from 'axios'
 import SlugComponent from './SlugComponent'
 import './collectionContainer.css'
 import Title from './Title/Title'
+import Url from '../API/Url.js'
 
 export default function CollectionContainer(){
   const Url = [
@@ -18,7 +18,6 @@ export default function CollectionContainer(){
   "https://thequint-malibu-beta.quintype.io/api/v1/collections/education",
   "https://thequint-malibu-beta.quintype.io/api/v1/collections/my-report",
   "https://thequint-malibu-beta.quintype.io/api/v1/collections/podcast",
-
   "https://thequint-malibu-beta.quintype.io/api/v1/collections/sports",
   "https://thequint-malibu-beta.quintype.io/api/v1/collections/big-story",
   "https://thequint-malibu-beta.quintype.io/api/v1/collections/neon",
@@ -31,11 +30,14 @@ export default function CollectionContainer(){
 
   const [data,setData] = useState([])
 
-  useEffect(async () => {
-    const result = await axios(
-      'https://thequint-malibu-beta.quintype.io/api/v1/collections/home',
-    );
-    setData(result.data.items);
+  useEffect(() => {
+    async function fetchData(){
+      const result = await axios(
+        'https://thequint-malibu-beta.quintype.io/api/v1/collections/home',
+      );
+      setData(result.data.items);
+    }
+    fetchData();
   },[])
 
 

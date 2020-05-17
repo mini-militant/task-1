@@ -1,5 +1,8 @@
 .layout-card{
+  min-height: 320px;
   box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
   padding:10px;
   margin:10px;
+  textOverflow: ellipsis;
+  word-break: break-word;
 }

@@ -1,7 +1,8 @@
 import React,{useState,useEffect} from 'react'
 import axios from 'axios'
 import Layout from '../molecule/Layout'
-export default function TestComponent(props){
+import './slugContainer.css'
+export default function SlugComponent(props){
 
   const[slugData,setSlugData] = useState([])
   useEffect(async () => {
@@ -9,11 +10,9 @@ export default function TestComponent(props){
     setSlugData(result.data.items);
   },[])
 
-  console.log('slugData',slugData);
   return(
     <div>
-    <p style={{color:"red"}}>{props.url}</p>
-    <div>
+      <div className='slug-container'>
       {
         slugData.filter(item=>item.type==='story')
         .slice(0,6)

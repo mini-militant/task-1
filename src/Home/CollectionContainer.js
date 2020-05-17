@@ -1,8 +1,9 @@
 import React,{useState,useEffect} from 'react';
 import Api from '../API/Api'
 import axios from 'axios'
-import TestComponent from './TestComponent'
+import SlugComponent from './SlugComponent'
 import './collectionContainer.css'
+import Title from './Title/Title'
 
 export default function CollectionContainer(){
   const Url = [
@@ -39,17 +40,16 @@ export default function CollectionContainer(){
 
 
   return(
-    <div >
+    <div className='collection-container'>
     {
       data.filter(item=>item.type==='collection')
       .map(filteredData=>{
         let url=Url.filter(i=>i.split('/').includes(filteredData.slug)).join()
         return(
           <div >
-        <p>{filteredData.name}</p>
-        <div className='collection-container'>
-        <TestComponent url={url}/>
-        </div>
+        <Title name={filteredData.name}/>
+        <SlugComponent url={url}/>
+
         </div>
       )
       })

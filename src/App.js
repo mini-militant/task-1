@@ -1,12 +1,12 @@
 import React from 'react'
 import logo from './logo.svg';
 import Stories from './Templates/Stories'
-import CollectionContainer from './Home/CollectionContainer'
+import CollectionComponent from './Home/CollectionComponent'
 
 function App() {
   return (
     <div className="App">
-      <CollectionContainer/>
+      <CollectionComponent/>
     </div>
   );
 }

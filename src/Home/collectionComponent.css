@@ -1,3 +1,5 @@
-.collection-container{
-  padding:30px;
+.collection-container {
+  max-width: 1080px;
+  margin: 0 auto;
+  padding: 30px;
 }

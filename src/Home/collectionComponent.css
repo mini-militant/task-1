@@ -1,17 +1,5 @@
 .collection-container {
   max-width: 1080px;
   margin: 0 auto;
-  padding: 30px;
-}
-
-@media only screen and (max-width: 1024px) {
-  .collection-container {
-    max-width: 800px;
-  }
-}
-
-@media only screen and (max-width: 768px) {
-  .collection-container {
-    max-width: 650px;
-  }
+  padding: 15px;
 }

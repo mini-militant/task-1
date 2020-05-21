@@ -1,0 +1,15 @@
+.FirstItem-container {
+  display: flex;
+}
+.firstItem-image {
+  width: 50%;
+  height: 290px;
+}
+.firstItem-content {
+  display: flex;
+  flex-direction: column;
+  padding-left: 10px;
+}
+#firstItem-authorName {
+  justify-content: flex-end;
+}

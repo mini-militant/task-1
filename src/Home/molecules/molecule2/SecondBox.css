@@ -1,0 +1,13 @@
+.SecondBox-container {
+  display: flex;
+  margin: 10px;
+}
+.SecondBox-image {
+  width: 120px;
+  height: 90px;
+}
+.SecondBox-content {
+  padding-left: 10px;
+  display: flex;
+  flex-direction: column;
+}

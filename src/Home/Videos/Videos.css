@@ -1,0 +1,22 @@
+.videos-container {
+  display: grid;
+}
+
+.grid-item {
+  border: 1px solid black;
+}
+
+.item1 {
+  padding: 10px;
+  grid-column: 1 / span 2;
+  grid-row: 1;
+}
+
+.item2 {
+  grid-column: 3;
+  grid-row: 1;
+}
+.item3 {
+  grid-column: 1;
+  grid-row: 2;
+}

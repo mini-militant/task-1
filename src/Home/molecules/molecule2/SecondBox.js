@@ -1,4 +1,5 @@
 import React from "react";
+import Headline from "../../../atom/Headline/Headline";
 import "./SecondBox.css";
 
 export default function SecondBox(props) {
@@ -10,9 +11,7 @@ export default function SecondBox(props) {
         alt="error"
       />
       <div className="SecondBox-content">
-        <span>
-          <strong>{props.headline}</strong>
-        </span>
+        <Headline headline={props.headline} />
         <span>
           By <strong>{props.authorName}</strong>
         </span>

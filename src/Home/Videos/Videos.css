@@ -1,9 +1,10 @@
 .videos-container {
   display: grid;
+  grid-auto-columns: 33%;
 }
 
 .grid-item {
-  border: 1px solid black;
+  border: 0.01px solid black;
 }
 
 .item1 {

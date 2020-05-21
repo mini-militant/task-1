@@ -10,6 +10,8 @@
   flex-direction: column;
   padding-left: 10px;
 }
-#firstItem-authorName {
-  justify-content: flex-end;
+.firstItem-authorName {
+  display: flex;
+  flex-direction: column;
+  margin-top: 210px;
 }

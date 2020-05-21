@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
-import Layout from "../../molecule/Layout";
 import FirstItem from "../molecules/molecule1/FirstItem";
 import SecondBox from "../molecules/molecule2/SecondBox";
 import ThirdBox from "../molecules/molecule3/ThirdBox";
@@ -20,52 +19,52 @@ export default function Videos(props) {
     fetchData();
   }, []);
 
-  const firstBoxElement = storiesData
-    .slice(0, 1)
-    .map((item) => (
+  const firstBoxElement = storiesData.slice(0, 1).map((item) => (
+    <div key={item.id}>
       <FirstItem
         imgKey={item.story["hero-image-s3-key"]}
         headline={item.story.headline}
         authorName={item.story["author-name"]}
       />
-    ));
+    </div>
+  ));
 
-  const SecondBoxElement = storiesData
-    .slice(1, 4)
-    .map((item) => (
+  const SecondBoxElement = storiesData.slice(1, 4).map((item) => (
+    <div key={item.id}>
       <SecondBox
         imgKey={item.story["hero-image-s3-key"]}
         headline={item.story.headline}
         authorName={item.story["author-name"]}
       />
-    ));
-  const ThirdBoxElement = storiesData
-    .slice(4, 5)
-    .map((item) => (
+    </div>
+  ));
+  const ThirdBoxElement = storiesData.slice(4, 5).map((item) => (
+    <div key={item.id}>
       <ThirdBox
         imgKey={item.story["hero-image-s3-key"]}
         headline={item.story.headline}
         authorName={item.story["author-name"]}
       />
-    ));
-  const FourthBoxElement = storiesData
-    .slice(5, 6)
-    .map((item) => (
+    </div>
+  ));
+  const FourthBoxElement = storiesData.slice(5, 6).map((item) => (
+    <div key={item.id}>
       <ThirdBox
         imgKey={item.story["hero-image-s3-key"]}
         headline={item.story.headline}
         authorName={item.story["author-name"]}
       />
-    ));
-  const FifthBoxElement = storiesData
-    .slice(6, 7)
-    .map((item) => (
+    </div>
+  ));
+  const FifthBoxElement = storiesData.slice(6, 7).map((item) => (
+    <div key={item.id}>
       <ThirdBox
         imgKey={item.story["hero-image-s3-key"]}
         headline={item.story.headline}
         authorName={item.story["author-name"]}
       />
-    ));
+    </div>
+  ));
 
   return (
     <div>

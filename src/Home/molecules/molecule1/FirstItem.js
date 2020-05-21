@@ -11,7 +11,8 @@ export default function FirstItem(props) {
       />
       <div className="firstItem-content">
         <span>{props.headline}</span>
-        <span id="firstItem-authorName"> By {props.authorName}</span>
+
+        <p className="firstItem-authorName"> By {props.authorName}</p>
       </div>
     </div>
   );

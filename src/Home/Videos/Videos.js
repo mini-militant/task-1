@@ -48,6 +48,25 @@ export default function Videos(props) {
         authorName={item.story["author-name"]}
       />
     ));
+  const FourthBoxElement = storiesData
+    .slice(5, 6)
+    .map((item) => (
+      <ThirdBox
+        imgKey={item.story["hero-image-s3-key"]}
+        headline={item.story.headline}
+        authorName={item.story["author-name"]}
+      />
+    ));
+  const FifthBoxElement = storiesData
+    .slice(6, 7)
+    .map((item) => (
+      <ThirdBox
+        imgKey={item.story["hero-image-s3-key"]}
+        headline={item.story.headline}
+        authorName={item.story["author-name"]}
+      />
+    ));
+
   return (
     <div>
       {shouldShowTitle ? <p> {props.name} </p> : null}
@@ -56,6 +75,8 @@ export default function Videos(props) {
         <div className="grid-item item1">{firstBoxElement}</div>
         <div className="grid-item item2">{SecondBoxElement}</div>
         <div className="grid-item item3">{ThirdBoxElement}</div>
+        <div className="grid-item item4">{FourthBoxElement}</div>
+        <div className="grid-item item5">{FifthBoxElement}</div>
       </div>
     </div>
   );

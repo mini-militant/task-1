@@ -6,7 +6,10 @@
   width: 30%;
   height: 80px;
 }
-
+.SecondBox-content {
+  display: flex;
+  flex-direction: column;
+}
 @media (max-width: 500px) {
   .SecondBox-container {
     display: flex;

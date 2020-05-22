@@ -8,6 +8,11 @@
   height: 80px;
 }
 
+.ThirdItem-content {
+  display: flex;
+  flex-direction: column;
+}
+
 @media (max-width: 500px) {
   .ThirdItem-container {
     display: flex;

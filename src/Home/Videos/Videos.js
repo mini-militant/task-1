@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
+import Title from "../Title/Title";
 import FirstItem from "../molecules/molecule1/FirstItem";
 import SecondItem from "../molecules/molecule2/SecondItem";
 import ThirdItem from "../molecules/molecule3/ThirdItem";
@@ -91,7 +92,7 @@ export default function Videos(props) {
 
   return (
     <div>
-      {shouldShowTitle ? <p> {props.name} </p> : null}
+      {shouldShowTitle ? <Title name={props.name} /> : null}
 
       <div className="videos-container">
         <div className="top-container">

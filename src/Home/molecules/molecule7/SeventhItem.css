@@ -1,3 +1,7 @@
 .SeventhItem-container {
   padding: 10px;
 }
+.SeventhItem-content {
+  display: flex;
+  flex-direction: column;
+}

@@ -6,6 +6,10 @@
   width: 30%;
   height: 80px;
 }
+.FourthItem-content {
+  display: flex;
+  flex-direction: column;
+}
 @media (max-width: 500px) {
   .FourthItem-container {
     display: flex;

@@ -1,0 +1,21 @@
+.ThirdItem-container {
+  display: flex;
+  margin: 10px;
+}
+
+.ThirdItem-image {
+  width: 30%;
+  height: 80px;
+}
+
+@media (max-width: 500px) {
+  .ThirdItem-container {
+    display: flex;
+    flex-direction: column;
+    margin: 10px;
+  }
+  .ThirdItem-image {
+    width: 100%;
+    height: 260px;
+  }
+}

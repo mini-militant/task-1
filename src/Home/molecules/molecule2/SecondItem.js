@@ -1,8 +1,8 @@
 import React from "react";
 import Headline from "../../../atom/Headline/Headline";
-import "./SecondBox.css";
+import "./SecondItem.css";
 
-export default function SecondBox(props) {
+export default function SecondItem(props) {
   return (
     <div className="SecondBox-container">
       <img
@@ -11,7 +11,7 @@ export default function SecondBox(props) {
         alt="error"
       />
       <div className="SecondBox-content">
-        <Headline headline={props.headline} />
+        <span>{props.headline}</span>
         <span>
           By <strong>{props.authorName}</strong>
         </span>

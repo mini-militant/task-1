@@ -1,5 +1,6 @@
 .FirstItem-container {
   display: flex;
+  padding: 10px;
 }
 .firstItem-image {
   width: 50%;
@@ -14,4 +15,17 @@
   display: flex;
   flex-direction: column;
   margin-top: 210px;
+}
+@media (max-width: 500px) {
+  .FirstItem-container {
+    display: flex;
+    flex-direction: column;
+  }
+  .firstItem-authorName {
+    margin-top: 0px;
+  }
+  .firstItem-image {
+    width: 100%;
+    height: 260px;
+  }
 }

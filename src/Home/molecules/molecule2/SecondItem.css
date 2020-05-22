@@ -1,0 +1,20 @@
+.SecondBox-container {
+  display: flex;
+  margin: 10px;
+}
+.SecondBox-image {
+  width: 30%;
+  height: 80px;
+}
+
+@media (max-width: 500px) {
+  .SecondBox-container {
+    display: flex;
+    flex-direction: column;
+    margin: 10px;
+  }
+  .SecondBox-image {
+    width: 100%;
+    height: 260px;
+  }
+}

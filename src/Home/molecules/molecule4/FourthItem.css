@@ -1,0 +1,19 @@
+.FourthItem-container {
+  display: flex;
+  margin: 10px;
+}
+.FourthItem-image {
+  width: 30%;
+  height: 80px;
+}
+@media (max-width: 500px) {
+  .FourthItem-container {
+    display: flex;
+    flex-direction: column;
+    margin: 10px;
+  }
+  .FourthItem-image {
+    width: 100%;
+    height: 260px;
+  }
+}

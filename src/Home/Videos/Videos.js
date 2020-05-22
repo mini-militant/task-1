@@ -1,8 +1,12 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import FirstItem from "../molecules/molecule1/FirstItem";
-import SecondBox from "../molecules/molecule2/SecondBox";
-import ThirdBox from "../molecules/molecule3/ThirdBox";
+import SecondItem from "../molecules/molecule2/SecondItem";
+import ThirdItem from "../molecules/molecule3/ThirdItem";
+import FourthItem from "../molecules/molecule4/FourthItem";
+import FifthItem from "../molecules/molecule5/FifthItem";
+import SixthItem from "../molecules/molecule6/SixthItem";
+import SeventhItem from "../molecules/molecule7/SeventhItem";
 import "./Videos.css";
 
 export default function Videos(props) {
@@ -29,36 +33,55 @@ export default function Videos(props) {
     </div>
   ));
 
-  const SecondBoxElement = storiesData.slice(1, 4).map((item) => (
+  const SecondBoxElement = storiesData.slice(1, 2).map((item) => (
     <div key={item.id}>
-      <SecondBox
+      <SecondItem
         imgKey={item.story["hero-image-s3-key"]}
         headline={item.story.headline}
         authorName={item.story["author-name"]}
       />
     </div>
   ));
-  const ThirdBoxElement = storiesData.slice(4, 5).map((item) => (
+  const ThirdBoxElement = storiesData.slice(2, 3).map((item) => (
     <div key={item.id}>
-      <ThirdBox
+      <ThirdItem
         imgKey={item.story["hero-image-s3-key"]}
         headline={item.story.headline}
         authorName={item.story["author-name"]}
       />
     </div>
   ));
-  const FourthBoxElement = storiesData.slice(5, 6).map((item) => (
+  const FourthBoxElement = storiesData.slice(3, 4).map((item) => (
     <div key={item.id}>
-      <ThirdBox
+      <FourthItem
         imgKey={item.story["hero-image-s3-key"]}
         headline={item.story.headline}
         authorName={item.story["author-name"]}
       />
     </div>
   ));
-  const FifthBoxElement = storiesData.slice(6, 7).map((item) => (
+  const FifthBoxElement = storiesData.slice(4, 5).map((item) => (
     <div key={item.id}>
-      <ThirdBox
+      <FifthItem
+        imgKey={item.story["hero-image-s3-key"]}
+        headline={item.story.headline}
+        authorName={item.story["author-name"]}
+      />
+    </div>
+  ));
+
+  const SixthBoxElement = storiesData.slice(5, 6).map((item) => (
+    <div key={item.id}>
+      <SixthItem
+        imgKey={item.story["hero-image-s3-key"]}
+        headline={item.story.headline}
+        authorName={item.story["author-name"]}
+      />
+    </div>
+  ));
+  const SeventhBoxElement = storiesData.slice(6, 7).map((item) => (
+    <div key={item.id}>
+      <SeventhItem
         imgKey={item.story["hero-image-s3-key"]}
         headline={item.story.headline}
         authorName={item.story["author-name"]}
@@ -71,11 +94,19 @@ export default function Videos(props) {
       {shouldShowTitle ? <p> {props.name} </p> : null}
 
       <div className="videos-container">
-        <div className="grid-item item1">{firstBoxElement}</div>
-        <div className="grid-item item2">{SecondBoxElement}</div>
-        <div className="grid-item item3">{ThirdBoxElement}</div>
-        <div className="grid-item item4">{FourthBoxElement}</div>
-        <div className="grid-item item5">{FifthBoxElement}</div>
+        <div className="top-container">
+          <div className="grid-item item1">{firstBoxElement}</div>
+          <div className="grid-item item2">
+            {SecondBoxElement}
+            {ThirdBoxElement}
+            {FourthBoxElement}
+          </div>
+        </div>
+        <div className="bottom-container">
+          {FifthBoxElement}
+          {SixthBoxElement}
+          {SeventhBoxElement}
+        </div>
       </div>
     </div>
   );

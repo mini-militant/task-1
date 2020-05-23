@@ -17,10 +17,10 @@
 .bottom-container {
   display: grid;
   grid-auto-columns: 33.33%;
-  grid-template-columns: auto auto auto;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
 }
 
-@media (max-width: 500px) {
+@media (max-width: 550px) {
   .top-container {
     grid-template-columns: auto;
     grid-template-areas:

@@ -1,5 +1,4 @@
 import React from "react";
-import Layout from "../../../molecule/Layout";
 import "./ThirdItem.css";
 
 export default function ThirdItem(props) {

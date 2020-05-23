@@ -4,6 +4,7 @@
 .top-container {
   display: grid;
   grid-auto-columns: 33.33%;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   grid-template-areas: "item1 item1 item2";
 }
 
@@ -14,12 +15,27 @@
 .item2 {
   grid-area: item2;
 }
+
+.item3 {
+  grid-area: item3;
+}
+.item4 {
+  grid-area: item4;
+}
 .bottom-container {
   display: grid;
   grid-auto-columns: 33.33%;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
 }
 
+@media (max-width: 700px) {
+  .top-container {
+    grid-template-columns: auto;
+    grid-template-areas:
+      "item1 item1"
+      "item2";
+  }
+}
 @media (max-width: 550px) {
   .top-container {
     grid-template-columns: auto;

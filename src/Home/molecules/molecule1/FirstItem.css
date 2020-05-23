@@ -1,11 +1,10 @@
 .FirstItem-container {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  padding: 10px;
 }
 .firstItem-image {
   width: 100%;
-  height: 290px;
+  height: 270px;
 }
 .firstItem-content {
   display: flex;

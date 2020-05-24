@@ -11,7 +11,7 @@ export default function SecondItem(props) {
         alt="error"
       />
       <div className="SecondBox-content">
-        <span>{props.headline}</span>
+        <span className="SecondItem-headline">{props.headline}</span>
         <span>
           By <strong>{props.authorName}</strong>
         </span>

@@ -10,7 +10,7 @@ export default function FourthItem(props) {
         alt="error"
       />
       <div className="FourthItem-content">
-        <span>{props.headline}</span>
+        <span className="FourthItem-headline">{props.headline}</span>
         <span>
           By <strong>{props.authorName}</strong>
         </span>

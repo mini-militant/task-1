@@ -10,7 +10,7 @@ export default function ThirdItem(props) {
         alt="error"
       />
       <div className="ThirdItem-content">
-        <span>{props.headline}</span>
+        <span className="ThirdItem-headline">{props.headline}</span>
         <span>
           By <strong>{props.authorName}</strong>
         </span>

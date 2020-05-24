@@ -10,9 +10,9 @@ export default function FirstItem(props) {
         alt="error"
       />
       <div className="firstItem-content">
-        <p className="firstItem-headline">{props.headline}</p>
+        <span className="firstItem-headline">{props.headline}</span>
 
-        <p className="firstItem-authorName"> By {props.authorName}</p>
+        <span className="firstItem-authorName"> By {props.authorName}</span>
       </div>
     </div>
   );

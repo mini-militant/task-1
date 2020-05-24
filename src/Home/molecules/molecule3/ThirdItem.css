@@ -13,12 +13,17 @@
   flex-direction: column;
   padding-left: 10px;
 }
-
+.ThirdItem-headline {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
 @media (max-width: 500px) {
   .ThirdItem-container {
     display: flex;
     flex-direction: column;
-    margin: 10px;
   }
   .ThirdItem-image {
     width: 100%;

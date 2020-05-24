@@ -11,11 +11,17 @@
   flex-direction: column;
   padding-left: 10px;
 }
+.SecondItem-headline {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
 @media only screen and (max-width: 500px) {
   .SecondBox-container {
     display: flex;
     flex-direction: column;
-    margin: 10px;
   }
   .SecondBox-image {
     width: 100%;

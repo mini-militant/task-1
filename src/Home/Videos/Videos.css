@@ -1,12 +1,13 @@
 .videos-container {
   display: grid;
+  grid-row-gap: 10px;
 }
 .top-container {
   display: grid;
   grid-auto-columns: 33.33%;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   grid-template-areas: "item1 item1 item2";
-  grid-column-gap: 5px;
+  grid-column-gap: 10px;
 }
 
 .item1 {
@@ -26,7 +27,7 @@
 .bottom-container {
   display: grid;
   grid-auto-columns: 33.33%;
-  grid-column-gap: 5px;
+  grid-column-gap: 10px;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
 }
 

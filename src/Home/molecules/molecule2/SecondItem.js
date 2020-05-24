@@ -1,5 +1,4 @@
 import React from "react";
-import Headline from "../../../atom/Headline/Headline";
 import "./SecondItem.css";
 
 export default function SecondItem(props) {

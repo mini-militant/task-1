@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import axios from "axios";
 import CategoryComponent from "./CategoryComponent";
 import "./collectionComponent.css";
-import Title from "./Title/Title";
+
 import Videos from "./Videos/Videos";
 
 export default function CollectionComponent() {

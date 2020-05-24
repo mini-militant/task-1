@@ -1,12 +1,11 @@
-import React from 'react'
-import logo from './logo.svg';
-import Stories from './Templates/Stories'
-import CollectionComponent from './Home/CollectionComponent'
+import React from "react";
+import Stories from "./Templates/Stories";
+import CollectionComponent from "./Home/CollectionComponent";
 
 function App() {
   return (
     <div className="App">
-      <CollectionComponent/>
+      <CollectionComponent />
     </div>
   );
 }

@@ -1,6 +1,6 @@
 .ThirdItem-container {
   display: flex;
-  margin: 10px;
+  margin-top: 10px;
 }
 
 .ThirdItem-image {
@@ -31,5 +31,6 @@
   }
   .ThirdItem-content {
     padding-left: 0px;
+    margin-bottom: 10px;
   }
 }

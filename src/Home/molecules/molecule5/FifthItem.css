@@ -3,6 +3,7 @@
 .FifthItem-content {
   display: flex;
   flex-direction: column;
+  margin-bottom: 20px;
 }
 .FifthItem-headline {
   overflow: hidden;

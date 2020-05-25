@@ -1,6 +1,7 @@
 .FirstItem-container {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
+  margin: 10px;
 }
 .firstItem-image {
   width: 100%;
@@ -26,6 +27,7 @@
   .FirstItem-container {
     display: flex;
     flex-direction: column;
+    margin: 15px;
   }
   .firstItem-content {
     padding-left: 0px;

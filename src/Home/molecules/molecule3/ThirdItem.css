@@ -1,6 +1,6 @@
 .ThirdItem-container {
   display: flex;
-  margin-top: 10px;
+  margin-top: 15px;
 }
 
 .ThirdItem-image {
@@ -25,24 +25,4 @@
   font-style: italic;
   font-weight: 400;
   color: gray;
-}
-@media (max-width: 500px) {
-  .ThirdItem-container {
-    display: flex;
-    flex-direction: column;
-  }
-  .ThirdItem-image {
-    width: 100%;
-    height: 260px;
-  }
-  .ThirdItem-content {
-    padding-left: 0px;
-    margin-bottom: 10px;
-  }
-  .ThirdItem-authorName {
-    margin-top: 5px;
-  }
-  .ThirdItem-headline {
-    margin-top: 10px;
-  }
 }

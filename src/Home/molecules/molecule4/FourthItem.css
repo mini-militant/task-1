@@ -18,6 +18,12 @@
   -webkit-line-clamp: 2;
   -webkit-box-orient: vertical;
 }
+.FourthItem-authorName {
+  font-size: 14px;
+  font-style: italic;
+  font-weight: 400;
+  color: gray;
+}
 @media (max-width: 500px) {
   .FourthItem-container {
     display: flex;
@@ -30,5 +36,11 @@
   .FourthItem-content {
     padding-left: 0px;
     margin-bottom: 10px;
+  }
+  .FourthItem-authorName {
+    margin-top: 5px;
+  }
+  .FourthItem-headline {
+    margin-top: 10px;
   }
 }

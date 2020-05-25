@@ -7,8 +7,16 @@
 }
 .SixthItem-headline {
   overflow: hidden;
+  margin-top: 10px;
   text-overflow: ellipsis;
   display: -webkit-box;
   -webkit-line-clamp: 2;
   -webkit-box-orient: vertical;
+}
+.SixthItem-authorName {
+  margin-top: 5px;
+  font-size: 14px;
+  font-style: italic;
+  font-weight: 400;
+  color: gray;
 }

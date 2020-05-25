@@ -7,9 +7,7 @@ export default function SeventhItem(props) {
       <img src={`https://images.assettype.com/${props.imgKey}`} alt="error" />
       <div className="SeventhItem-content">
         <span className="SeventhItem-headline">{props.headline}</span>
-        <span>
-          By <strong>{props.authorName}</strong>
-        </span>
+        <span className="SeventhItem-authorName">By {props.authorName}</span>
       </div>
     </div>
   );

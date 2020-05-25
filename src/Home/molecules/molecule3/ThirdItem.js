@@ -11,9 +11,7 @@ export default function ThirdItem(props) {
       />
       <div className="ThirdItem-content">
         <span className="ThirdItem-headline">{props.headline}</span>
-        <span>
-          By <strong>{props.authorName}</strong>
-        </span>
+        <span className="ThirdItem-authorName">By {props.authorName}</span>
       </div>
     </div>
   );

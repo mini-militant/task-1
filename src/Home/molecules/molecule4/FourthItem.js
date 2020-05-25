@@ -11,9 +11,7 @@ export default function FourthItem(props) {
       />
       <div className="FourthItem-content">
         <span className="FourthItem-headline">{props.headline}</span>
-        <span>
-          By <strong>{props.authorName}</strong>
-        </span>
+        <span className="FourthItem-authorName">By {props.authorName}</span>
       </div>
     </div>
   );

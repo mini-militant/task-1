@@ -1,16 +1,15 @@
 .FirstItem-container {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  margin: 10px;
+  padding: 15px;
 }
 .firstItem-image {
-  width: 100%;
+  width: 95%;
   height: 270px;
 }
 .firstItem-content {
   display: flex;
   flex-direction: column;
-  padding-left: 10px;
   justify-content: space-between;
 }
 .firstItem-headline {
@@ -27,7 +26,6 @@
   .FirstItem-container {
     display: flex;
     flex-direction: column;
-    margin: 15px;
   }
   .firstItem-content {
     padding-left: 0px;

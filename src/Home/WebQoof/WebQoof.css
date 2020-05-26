@@ -26,5 +26,6 @@
 .WebQoof-button:focus {
   background-color: black;
   color: white;
+  border-color: black;
   outline: none;
 }

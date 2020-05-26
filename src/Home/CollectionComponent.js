@@ -2,8 +2,8 @@ import React, { useState, useEffect } from "react";
 import axios from "axios";
 import CategoryComponent from "./CategoryComponent";
 import "./collectionComponent.css";
-
 import Videos from "./Videos/Videos";
+import WebQoof from "./WebQoof/WebQoof";
 
 export default function CollectionComponent() {
   const [data, setData] = useState([]);
@@ -18,6 +18,12 @@ export default function CollectionComponent() {
     fetchData();
   }, []);
 
+  const ThirdItem = data.slice(2, 3).map((item) => (
+    <div key={item.id}>
+      <WebQoof url={baseUrl + item.slug} name={item.name} />
+    </div>
+  ));
+
   return (
     <div className="collection-container">
       {data.map((filteredData, index) => {
@@ -25,6 +31,11 @@ export default function CollectionComponent() {
           <div key={filteredData.id}>
             {index === 1 ? (
               <Videos
+                url={baseUrl + filteredData.slug}
+                name={filteredData.name}
+              />
+            ) : index === 4 ? (
+              <WebQoof
                 url={baseUrl + filteredData.slug}
                 name={filteredData.name}
               />

@@ -1,0 +1,16 @@
+.WebQoof-container {
+  display: grid;
+  grid-template-columns: repeat(3, auto);
+}
+.WebQoof-TitleButton {
+  display: grid;
+  grid-template-columns: 11fr 1fr;
+  justify-content: space-between;
+}
+.WebQoof-button {
+  display: grid;
+  width: 25px;
+  height: 25px;
+  align-self: center;
+  justify-self: center;
+}

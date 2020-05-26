@@ -7,8 +7,8 @@ import "./WebQoof.css";
 export default function WebQoof(props) {
   const [storiesData, setStoriesData] = useState([]);
   const [shouldShowTitle, setShouldShowTitle] = useState(false);
-  const [buttonValue, setbuttonValue] = useState("+");
-  const [open, setOpen] = useState(false);
+  const [buttonValue, setbuttonValue] = useState("-");
+  const [open, setOpen] = useState(true);
 
   useEffect(() => {
     async function fetchData() {
@@ -23,11 +23,11 @@ export default function WebQoof(props) {
   function handleClick(e) {
     e.preventDefault();
     setbuttonValue(buttonValue === "+" ? "-" : "+");
-    setOpen(open === false ? true : false);
+    setOpen(open === true ? false : true);
   }
 
   return (
-    <div>
+    <div className="WebQoof-root">
       <div className="WebQoof-TitleButton">
         <Title name={props.name} />
         <button className="WebQoof-button" onClick={handleClick}>

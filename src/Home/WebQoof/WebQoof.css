@@ -12,6 +12,9 @@
   display: grid;
   width: 25px;
   height: 25px;
+  font-size: 20px;
+
+  font-weight: 500;
   align-self: center;
   justify-self: center;
 }

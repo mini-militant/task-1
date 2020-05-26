@@ -1,8 +1,8 @@
 .videos-container {
   display: grid;
-  border-top: 1px dotted gray;
-  border-bottom: 1px dotted gray;
-  border-left: 1px dotted gray;
+  border-top: 1px solid gray;
+  border-bottom: 1px solid gray;
+  border-left: 1px solid gray;
 }
 
 .top-container {
@@ -10,7 +10,7 @@
   grid-auto-columns: 1fr;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   grid-template-areas: "item1 item1 item2";
-  border-bottom: 1px dotted gray;
+  border-bottom: 1px solid gray;
 }
 
 .item1 {
@@ -18,8 +18,8 @@
 }
 
 .item2 {
-  border-left: 1px dotted gray;
-  border-right: 1px dotted gray;
+  border-left: 1px solid gray;
+  border-right: 1px solid gray;
   grid-area: item2;
   padding: 15px;
 }
@@ -36,12 +36,12 @@
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
 }
 .bottom-container > div {
-  border-right: 1px dotted gray;
+  border-right: 1px solid gray;
 }
 
 @media (max-width: 700px) {
   .top-container {
-    border: 1px dotted gray;
+    border: 1px solid gray;
     grid-template-columns: auto;
     grid-template-areas:
       "item1 item1"
@@ -62,12 +62,12 @@
     grid-template-columns: auto;
   }
   .item2 {
-    border-top: 1px dotted gray;
+    border-top: 1px solid gray;
     border-left: 0px dotted gray;
     border-right: 0px dotted gray;
     padding: 15px;
   }
   .bottom-container > div {
-    border-bottom: 1px dotted gray;
+    border-bottom: 1px solid gray;
   }
 }

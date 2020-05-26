@@ -34,19 +34,18 @@ export default function WebQoof(props) {
           {buttonValue}
         </button>
       </div>
-      {open ? (
-        <div className="WebQoof-container">
-          {storiesData.slice(0, 3).map((item) => (
-            <div key={item.id}>
-              <Layout
-                imgKey={item.story["hero-image-s3-key"]}
-                headline={item.story.headline}
-                authorName={item.story["author-name"]}
-              />
-            </div>
-          ))}
-        </div>
-      ) : null}
+
+      <div className={"WebQoof-container " + (open ? "displayContent" : " ")}>
+        {storiesData.slice(0, 3).map((item) => (
+          <div key={item.id}>
+            <Layout
+              imgKey={item.story["hero-image-s3-key"]}
+              headline={item.story.headline}
+              authorName={item.story["author-name"]}
+            />
+          </div>
+        ))}
+      </div>
     </div>
   );
 }

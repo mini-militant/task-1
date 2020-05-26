@@ -8,6 +8,7 @@ export default function WebQoof(props) {
   const [storiesData, setStoriesData] = useState([]);
   const [shouldShowTitle, setShouldShowTitle] = useState(false);
   const [buttonValue, setbuttonValue] = useState("+");
+  const [open, setOpen] = useState(false);
 
   useEffect(() => {
     async function fetchData() {
@@ -19,23 +20,33 @@ export default function WebQoof(props) {
     fetchData();
   }, []);
 
+  function handleClick(e) {
+    e.preventDefault();
+    setbuttonValue(buttonValue === "+" ? "-" : "+");
+    setOpen(open === false ? true : false);
+  }
+
   return (
     <div>
       <div className="WebQoof-TitleButton">
         <Title name={props.name} />
-        <button className="WebQoof-button">{buttonValue}</button>
+        <button className="WebQoof-button" onClick={handleClick}>
+          {buttonValue}
+        </button>
       </div>
-      <div className="WebQoof-container">
-        {storiesData.slice(0, 3).map((item) => (
-          <div key={item.id}>
-            <Layout
-              imgKey={item.story["hero-image-s3-key"]}
-              headline={item.story.headline}
-              authorName={item.story["author-name"]}
-            />
-          </div>
-        ))}
-      </div>
+      {open ? (
+        <div className="WebQoof-container">
+          {storiesData.slice(0, 3).map((item) => (
+            <div key={item.id}>
+              <Layout
+                imgKey={item.story["hero-image-s3-key"]}
+                headline={item.story.headline}
+                authorName={item.story["author-name"]}
+              />
+            </div>
+          ))}
+        </div>
+      ) : null}
     </div>
   );
 }

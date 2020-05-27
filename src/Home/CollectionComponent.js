@@ -4,6 +4,7 @@ import CategoryComponent from "./CategoryComponent";
 import "./collectionComponent.css";
 import Videos from "./Videos/Videos";
 import WebQoof from "./WebQoof/WebQoof";
+import Covid from "./Covid/Covid";
 
 export default function CollectionComponent() {
   const [data, setData] = useState([]);
@@ -36,6 +37,11 @@ export default function CollectionComponent() {
               />
             ) : index === 4 ? (
               <WebQoof
+                url={baseUrl + filteredData.slug}
+                name={filteredData.name}
+              />
+            ) : index === 5 ? (
+              <Covid
                 url={baseUrl + filteredData.slug}
                 name={filteredData.name}
               />

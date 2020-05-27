@@ -1,0 +1,21 @@
+.covid-root {
+  background-color: black;
+  color: white;
+  margin-left: calc(50% - 49.4vw);
+  margin-right: calc(50% - 49.4vw);
+}
+.covid-container {
+  display: grid;
+  grid-template-areas:
+    "item1 item1 item1 item2"
+    "item1 item1 item1 item2"
+    "item1 item1 item1 item2"
+    "item1 item1 item1 item2";
+}
+.covid-item1 {
+  grid-area: item1;
+}
+
+.covid-item2 {
+  grid-area: item2;
+}

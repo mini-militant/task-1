@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import Title from "../Title/Title";
-import Layout from "../../molecule/Layout";
+import WebQoofContent from "./webQoofContent/WebQoofContent";
 import "./WebQoof.css";
 
 export default function WebQoof(props) {
@@ -38,7 +38,7 @@ export default function WebQoof(props) {
       <div className={"WebQoof-container " + (open ? "displayContent" : " ")}>
         {storiesData.slice(0, 3).map((item) => (
           <div key={item.id}>
-            <Layout
+            <WebQoofContent
               imgKey={item.story["hero-image-s3-key"]}
               headline={item.story.headline}
               authorName={item.story["author-name"]}

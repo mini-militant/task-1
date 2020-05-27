@@ -19,7 +19,11 @@ export default function CategoryComponent(props) {
   }, []);
 
   return (
-    <div>
+    <div
+      className={
+        "categoryComponent-root" + (shouldShowTitle ? " showTitle" : "")
+      }
+    >
       {shouldShowTitle ? <Title name={props.name} /> : null}
 
       <div className="slug-container">

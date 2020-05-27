@@ -1,17 +1,26 @@
-.slug-container{
+.categoryComponent-root {
+  display: none;
+}
+.showTitle {
+  display: block;
+  margin: 40px auto;
+}
+.slug-container {
   display: grid;
   grid-template-columns: auto auto auto;
-
 }
 
 @media only screen and (max-width: 820px) {
-  .slug-container{
-    grid-template-columns: auto auto ;
+  .slug-container {
+    grid-template-columns: auto auto;
   }
 }
 
 @media only screen and (max-width: 500px) {
-  .slug-container{
+  .categoryComponent-root {
+    margin: 20px auto;
+  }
+  .slug-container {
     grid-template-columns: auto;
   }
 }

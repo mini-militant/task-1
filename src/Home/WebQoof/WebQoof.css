@@ -15,7 +15,7 @@
   display: grid;
   grid-template-columns: 11fr 1fr;
   justify-content: space-between;
-  padding-left: 10px;
+  padding-left: 15px;
 }
 .WebQoof-button {
   display: grid;

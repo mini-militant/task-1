@@ -40,8 +40,8 @@ export default function Covid(props) {
 
   return (
     <div className="covid-root">
-      <p className="covid-title">{props.name} </p>
       <div className="covid-container">
+        <div className="covid-title">{props.name} </div>
         <div className="covid-item1">{FirstBoxElement}</div>
         <div className="covid-item2">
           {storiesData.slice(1, 6).map((item) => (

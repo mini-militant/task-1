@@ -12,10 +12,11 @@
   padding: 0 15px;
   display: grid;
   grid-template-areas:
+    "title title title"
     "item1 item1  item2"
     "item1 item1  item2"
     "item1 item1  item2";
-  height: 350px;
+  height: 460px;
 }
 .covid-item1 {
   grid-area: item1;
@@ -25,10 +26,15 @@
   grid-area: item2;
   overflow: scroll;
   overflow-x: hidden;
-  height: 320px;
+  height: 370px;
 }
 
 .covid-title {
+  grid-area: title;
+  font-size: 25px;
+  font-weight: 500;
+  text-transform: uppercase;
+  margin: 10px 0;
 }
 
 .covid-item2::-webkit-scrollbar {

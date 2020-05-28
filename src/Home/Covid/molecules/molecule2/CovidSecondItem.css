@@ -1,0 +1,9 @@
+.CovidSecondItem-container {
+  padding: 10px;
+  background-color: white;
+  color: black;
+}
+.CovidSecondItem-image {
+  width: 100%;
+  height: 80px;
+}

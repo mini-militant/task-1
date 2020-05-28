@@ -2,6 +2,8 @@ import React, { useState, useEffect } from "react";
 import Title from "../Title/Title";
 import axios from "axios";
 import "./Covid.css";
+import CovidFirstItem from "./molecules/molecule1/CovidFirstItem";
+import CovidSecondItem from "./molecules/molecule2/CovidSecondItem";
 
 export default function Covid(props) {
   const [storiesData, setStoriesData] = useState([]);
@@ -17,17 +19,32 @@ export default function Covid(props) {
     fetchData();
   }, []);
 
+  const FirstBoxElement = storiesData.slice(0, 1).map((item) => (
+    <div key={item.id}>
+      <CovidFirstItem
+        imgKey={item.story["hero-image-s3-key"]}
+        headline={item.story.headline}
+        authorName={item.story["author-name"]}
+      />
+    </div>
+  ));
+  const SecondBoxElement = storiesData.slice(1, 6).map((item) => (
+    <div key={item.id}>
+      <CovidSecondItem
+        imgKey={item.story["hero-image-s3-key"]}
+        headline={item.story.headline}
+        authorName={item.story["author-name"]}
+      />
+    </div>
+  ));
+
   return (
     <div className="covid-root">
-      <Title name={props.name} />
+      <p className="covid-title">{props.name} </p>
       <div className="covid-container">
-        <div className="covid-item1">1</div>
+        <div className="covid-item1">{FirstBoxElement}</div>
         <div className="covid-item2">
-          <div>2</div>
-          <div>3</div>
-          <div>4</div>
-          <div>5</div>
-          <div>6</div>
+          <div>{SecondBoxElement}</div>
         </div>
       </div>
     </div>

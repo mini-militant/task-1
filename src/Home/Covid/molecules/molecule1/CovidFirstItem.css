@@ -1,0 +1,14 @@
+.CovidFirstItem-container {
+  background-color: white;
+  color: black;
+  padding: 10px;
+}
+
+.CovidFirstItem-content {
+  display: flex;
+  flex-direction: column;
+}
+
+.CovidFirstItem-image {
+  height: 250px;
+}

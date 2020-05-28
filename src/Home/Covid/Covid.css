@@ -1,6 +1,10 @@
 .covid-root {
   background-color: black;
   color: white;
+  width: 100vw;
+  position: relative;
+  margin-left: -50vw;
+  left: 50%;
 }
 .covid-container {
   max-width: 1080px;
@@ -21,6 +25,7 @@
   grid-area: item2;
   overflow: scroll;
   overflow-x: hidden;
+  height: 320px;
 }
 
 .covid-title {

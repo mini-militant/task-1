@@ -55,12 +55,11 @@
       "title "
       "item1 "
       "item2";
-    height: 840px;
+    height: 850px;
     grid-row-gap: 10px;
   }
   .covid-item2 {
     grid-area: item2;
     overflow: auto;
-    height: 370px;
   }
 }

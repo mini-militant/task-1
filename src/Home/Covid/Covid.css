@@ -24,8 +24,7 @@
 
 .covid-item2 {
   grid-area: item2;
-  overflow: scroll;
-  overflow-x: hidden;
+  overflow-y: scroll;
   height: 370px;
 }
 
@@ -50,6 +49,18 @@
   border-radius: 25px;
 }
 
-.covid-item2 :first-child {
-  margin-top: 0px;
+@media only screen and (max-width: 550px) {
+  .covid-container {
+    grid-template-areas:
+      "title "
+      "item1 "
+      "item2";
+    height: 840px;
+    grid-row-gap: 10px;
+  }
+  .covid-item2 {
+    grid-area: item2;
+    overflow: auto;
+    height: 370px;
+  }
 }

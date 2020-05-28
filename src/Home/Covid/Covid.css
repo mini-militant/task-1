@@ -8,10 +8,10 @@
   padding: 0 15px;
   display: grid;
   grid-template-areas:
-    "item1 item1 item1 item2"
-    "item1 item1 item1 item2"
-    "item1 item1 item1 item2";
-  height: 400px;
+    "item1 item1  item2"
+    "item1 item1  item2"
+    "item1 item1  item2";
+  height: 350px;
 }
 .covid-item1 {
   grid-area: item1;
@@ -20,6 +20,7 @@
 .covid-item2 {
   grid-area: item2;
   overflow: scroll;
+  overflow-x: hidden;
 }
 
 .covid-title {

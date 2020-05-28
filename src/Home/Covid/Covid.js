@@ -44,7 +44,15 @@ export default function Covid(props) {
       <div className="covid-container">
         <div className="covid-item1">{FirstBoxElement}</div>
         <div className="covid-item2">
-          <div>{SecondBoxElement}</div>
+          {storiesData.slice(1, 6).map((item) => (
+            <div key={item.id}>
+              <CovidSecondItem
+                imgKey={item.story["hero-image-s3-key"]}
+                headline={item.story.headline}
+                authorName={item.story["author-name"]}
+              />
+            </div>
+          ))}
         </div>
       </div>
     </div>

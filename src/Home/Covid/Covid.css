@@ -26,18 +26,19 @@
 .covid-title {
 }
 
-::-webkit-scrollbar {
-  width: 10px;
+.covid-item2::-webkit-scrollbar {
+  width: 5px;
 }
 
-::-webkit-scrollbar-track {
-  background: #f1f1f1;
+.covid-item2::-webkit-scrollbar-track {
+  background: black;
 }
 
-::-webkit-scrollbar-thumb {
-  background: #888;
+.covid-item2::-webkit-scrollbar-thumb {
+  background: white;
+  border-radius: 25px;
 }
 
-::-webkit-scrollbar-thumb:hover {
+.covid-item2::-webkit-scrollbar-thumb:hover {
   background: #555;
 }

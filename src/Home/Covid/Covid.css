@@ -50,6 +50,6 @@
   border-radius: 25px;
 }
 
-.covid-item2::-webkit-scrollbar-thumb:hover {
-  background: #555;
+.covid-item2 :first-child {
+  margin-top: 0px;
 }

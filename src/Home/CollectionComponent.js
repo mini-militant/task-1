@@ -5,9 +5,11 @@ import "./collectionComponent.css";
 import Videos from "./Videos/Videos";
 import WebQoof from "./WebQoof/WebQoof";
 import Covid from "./Covid/Covid";
+import TwoItemLayout from "./TwoCollectionTwoLayout/TwoItemLayout";
 
 export default function CollectionComponent() {
   const [data, setData] = useState([]);
+  const [layout, setLayout] = useState([]);
   const baseUrl =
     "https://thequint-malibu-beta.quintype.io/api/v1/collections/";
 
@@ -15,18 +17,27 @@ export default function CollectionComponent() {
     async function fetchData() {
       const result = await axios(baseUrl + "home");
       setData(result.data.items.filter((item) => item.type === "collection"));
+      setLayout(
+        result.data.items.filter(
+          (item) =>
+            item["associated-metadata"].layout === "TwoCollectionWithTwoStories"
+        )
+      );
     }
     fetchData();
   }, []);
 
-  const ThirdItem = data.slice(2, 3).map((item) => (
-    <div key={item.id}>
-      <WebQoof url={baseUrl + item.slug} name={item.name} />
-    </div>
-  ));
-
   return (
     <div className="collection-container">
+      {layout.map((item, index) => (
+        <div key={item.id}>
+          <p>
+            <strong>{item.name}</strong>
+          </p>
+          <TwoItemLayout url={baseUrl + item.slug} name={item.name} />
+        </div>
+      ))}
+
       {data.map((filteredData, index) => {
         return (
           <div key={filteredData.id}>

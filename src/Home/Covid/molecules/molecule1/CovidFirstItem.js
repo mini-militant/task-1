@@ -1,4 +1,5 @@
 import React from "react";
+import AuthorName from "../../../../atom/AuthorName/AuthorName";
 import "./CovidFirstItem.css";
 
 export default function CovidFirstItem(props) {
@@ -12,10 +13,7 @@ export default function CovidFirstItem(props) {
         />
         <div className="CovidFirstItem-content">
           <span className="CovidFirstItem-headline">{props.headline}</span>
-
-          <span className="CovidFirstItem-authorName">
-            By {props.authorName}
-          </span>
+          <AuthorName authorName={props.authorName} />
         </div>
       </div>
     </div>

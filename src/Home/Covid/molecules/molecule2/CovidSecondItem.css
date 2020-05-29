@@ -9,3 +9,8 @@
   width: 100%;
   height: 100px;
 }
+@media only screen and (max-width: 550px) {
+  .CovidSecondItem-container {
+    margin-left: 0px;
+  }
+}

@@ -28,15 +28,6 @@ export default function Covid(props) {
       />
     </div>
   ));
-  const SecondBoxElement = storiesData.slice(1, 6).map((item) => (
-    <div key={item.id}>
-      <CovidSecondItem
-        imgKey={item.story["hero-image-s3-key"]}
-        headline={item.story.headline}
-        authorName={item.story["author-name"]}
-      />
-    </div>
-  ));
 
   return (
     <div className="covid-root">

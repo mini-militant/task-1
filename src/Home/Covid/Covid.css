@@ -59,7 +59,14 @@
     grid-row-gap: 10px;
   }
   .covid-item2 {
-    grid-area: item2;
-    margin-bottom: 20px;
+    display: flex;
+    white-space: nowrap;
+    overflow-x: auto;
+    overflow-y: hidden;
+    height: auto;
+    margin-bottom: 10px;
+  }
+  .covid-item2::-webkit-scrollbar {
+    height: 5px;
   }
 }

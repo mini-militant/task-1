@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 import ThreeStoriesLayout from "./ThreeStoriesLayout/ThreeStoriesLayout";
-
+import "./TwoItemLayout.css";
 export default function TwoItemLayout(props) {
   const [subHeadingData, setSubHeadingData] = useState([]);
   const [shouldShowTitle, setShouldShowTitle] = useState(false);
@@ -10,14 +10,14 @@ export default function TwoItemLayout(props) {
 
   useEffect(() => {
     async function fetchData() {
-      const result = await axios(props.url + "/?limit=2");
+      const result = await axios(props.url + "?limit=2");
       let stories = result.data.items;
       setSubHeadingData(stories);
       setShouldShowTitle(stories.length > 0);
     }
     fetchData();
   }, []);
-  console.log("subHeadingData", subHeadingData);
+
   return (
     <div className="subheading-container">
       {subHeadingData.map((item, index) => (

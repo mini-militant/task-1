@@ -3,6 +3,7 @@ import axios from "axios";
 import FirstStory from "../molecules/FirstStory/FirstStory";
 import SecondStory from "../molecules/SecondStory/SecondStory";
 import "./ThreeStoriesLayout.css";
+
 export default function ThreeStoriesLayout(props) {
   const [storiesData, setStoriesData] = useState([]);
   const [shouldShowTitle, setShouldShowTitle] = useState(false);

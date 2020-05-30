@@ -1,5 +1,6 @@
 .ThreeStoriesLayout-container {
   display: grid;
+  grid-row-gap: 10px;
 }
 .ThreeStoriesLayout-item2 {
   display: grid;

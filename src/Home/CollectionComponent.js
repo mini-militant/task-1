@@ -9,62 +9,61 @@ import TwoItemLayout from "./TwoCollectionTwoLayout/TwoItemLayout";
 
 export default function CollectionComponent() {
   const [data, setData] = useState([]);
-  const [layout, setLayout] = useState([]);
   const baseUrl =
     "https://thequint-malibu-beta.quintype.io/api/v1/collections/";
 
   useEffect(() => {
     async function fetchData() {
       const result = await axios(baseUrl + "home");
-      setData(result.data.items.filter((item) => item.type === "collection"));
-      setLayout(
-        result.data.items.filter(
-          (item) =>
-            item["associated-metadata"].layout === "TwoCollectionWithTwoStories"
-        )
-      );
+      setData(result.data.items);
     }
     fetchData();
   }, []);
 
   return (
     <div className="collection-container">
-      {layout.map((item, index) => (
-        <div key={item.id}>
-          <p>
-            <strong>{item.name}</strong>
-          </p>
-          <TwoItemLayout url={baseUrl + item.slug} name={item.name} />
-        </div>
-      ))}
+      {data
+        .filter((item) => item.type === "collection")
+        .map((filteredData, index) => {
+          return (
+            <div key={filteredData.id}>
+              {filteredData["associated-metadata"].layout ===
+              "TwoCollectionWithTwoStories" ? (
+                <div>
+                  <p>
+                    <strong>{filteredData.name}</strong>
+                  </p>
+                  <TwoItemLayout
+                    url={baseUrl + filteredData.slug}
+                    name={filteredData.name}
+                  />
+                </div>
+              ) : null}
 
-      {data.map((filteredData, index) => {
-        return (
-          <div key={filteredData.id}>
-            {index === 1 ? (
-              <Videos
-                url={baseUrl + filteredData.slug}
-                name={filteredData.name}
-              />
-            ) : index === 4 ? (
-              <WebQoof
-                url={baseUrl + filteredData.slug}
-                name={filteredData.name}
-              />
-            ) : index === 5 ? (
-              <Covid
-                url={baseUrl + filteredData.slug}
-                name={filteredData.name}
-              />
-            ) : (
-              <CategoryComponent
-                url={baseUrl + filteredData.slug}
-                name={filteredData.name}
-              />
-            )}
-          </div>
-        );
-      })}
+              {index === 1 ? (
+                <Videos
+                  url={baseUrl + filteredData.slug}
+                  name={filteredData.name}
+                />
+              ) : index === 4 ? (
+                <WebQoof
+                  url={baseUrl + filteredData.slug}
+                  name={filteredData.name}
+                />
+              ) : index === 5 ? (
+                <Covid
+                  url={baseUrl + filteredData.slug}
+                  name={filteredData.name}
+                />
+              ) : (
+                <CategoryComponent
+                  url={baseUrl + filteredData.slug}
+                  name={filteredData.name}
+                />
+              )}
+            </div>
+          );
+        })}
     </div>
   );
 }

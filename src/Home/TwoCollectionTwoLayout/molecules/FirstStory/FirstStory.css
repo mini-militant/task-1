@@ -1,0 +1,13 @@
+.FirstStory-container {
+  position: relative;
+}
+.FirstStory-headline {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  background: rgb(0, 0, 0); /* Fallback color */
+  background: rgba(0, 0, 0, 0.5); /* Black background with 0.5 opacity */
+  color: white;
+  padding-left: 20px;
+  padding-right: 20px;
+}

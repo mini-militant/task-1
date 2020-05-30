@@ -18,6 +18,7 @@ export default function TwoItemLayout(props) {
     fetchData();
   }, []);
 
+  console.log("TwoItemLayout", subHeadingData);
   return (
     <div className="subheading-container">
       {subHeadingData.map((item, index) => (

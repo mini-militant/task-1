@@ -1,6 +1,10 @@
 .FirstStory-container {
   position: relative;
 }
+.FirstStory-image {
+  border-radius: 7px;
+}
+
 .FirstStory-headline {
   position: absolute;
   bottom: 5px;

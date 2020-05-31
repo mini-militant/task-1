@@ -39,13 +39,15 @@ export default function CollectionComponent() {
                   />
                 </div>
               ) : null}
-
-              {index === 1 ? (
-                <Videos
+              {filteredData["associated-metadata"].layout ===
+              "VideoScroller" ? (
+                <Covid
                   url={baseUrl + filteredData.slug}
                   name={filteredData.name}
                 />
-              ) : index === 4 ? (
+              ) : null}
+
+              {index === 1 ? null : index === 4 ? (
                 <WebQoof
                   url={baseUrl + filteredData.slug}
                   name={filteredData.name}

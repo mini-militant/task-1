@@ -47,7 +47,7 @@ export default function CollectionComponent() {
                 />
               ) : null}
 
-              {index === 1 ? null : index === 4 ? (
+              {index === 4 ? (
                 <WebQoof
                   url={baseUrl + filteredData.slug}
                   name={filteredData.name}

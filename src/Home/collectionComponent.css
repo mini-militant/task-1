@@ -3,3 +3,8 @@
   margin: 0 auto;
   padding: 15px;
 }
+.twoCollectionContainer {
+  font-size: 25px;
+  font-weight: 500;
+  text-decoration: underline;
+}

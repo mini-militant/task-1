@@ -29,8 +29,10 @@ export default function CollectionComponent() {
             <div key={filteredData.id}>
               {filteredData["associated-metadata"].layout ===
               "TwoCollectionWithTwoStories" ? (
-                <div>
-                  <p className="twoCollectionContainer">{filteredData.name}</p>
+                <div className="twoCollectionContainer-root">
+                  <p className="twoCollectionContainer-title">
+                    {filteredData.name}
+                  </p>
                   <TwoItemLayout
                     url={baseUrl + filteredData.slug}
                     name={filteredData.name}

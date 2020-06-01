@@ -3,3 +3,9 @@
   grid-template-columns: auto auto;
   grid-column-gap: 20px;
 }
+
+@media (max-width: 550px) {
+  .subheading-container {
+    grid-template-columns: auto;
+  }
+}

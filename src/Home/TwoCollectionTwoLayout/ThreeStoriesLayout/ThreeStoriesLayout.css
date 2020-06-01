@@ -13,3 +13,9 @@
   font-weight: 500;
   color: #900ffa;
 }
+
+@media (max-width: 550px) {
+  .ThreeStoriesLayout-item2 {
+    grid-template-columns: 1fr;
+  }
+}
